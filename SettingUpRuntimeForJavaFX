@@ -1,0 +1,8 @@
+Youtube video from xemacscode
+  they downloded Eclipse but I believe this can also be done with IntelliJ
+  At the start, go to help and scroll to install new software
+  you would have to add a repository and I believe there is one for IntelliJ
+  For IntelliJ you would need to download the JavaFX SDK that jetbrains has available
+  so for IntelliJ you would start a new project and select JavaFX from the list
+  then you would need to add the JDK that you want to use
+  also JDK 11 and up need the download of JavaFX beacause it was not added to them
