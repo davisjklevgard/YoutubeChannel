@@ -1,0 +1,32 @@
+from xemascode Youtube channel
+  JavaFX 
+    media/graphics framework for creating GUIs in java applications
+    can run across multiple platforms
+    apps developed using Javafx can run on desktops, mobile phones, TV, tablets and more
+    JavaFX is intended to replace Swing as the standard GUI Library
+    Draws its own compnoents but less communication with the operating system
+    makes use of FXML a markupo language for defining user interfaces
+  
+  Features
+    Written in Java
+      Platform Indpendent
+    Scene Builder
+      Provides this application
+    CSS like styling
+      can improve the design on the application
+      would need to understand more of CSS for this to be understood
+    Canvas and Printing API
+      supplies Canvas
+    Rich set of APIs
+      includes 2d and 3d  many more
+      access Java Languages
+    Integrated Graphics Library
+      supports graphics known as Prism
+      
+  Java vs Swing
+    GUIs are created a lot faster
+    more sophisticated and aesthetically pleasing user interfaces
+    Easy integration of sounds, images and videos and of web content
+    Code simplified in JavaFX by seperating the UI from the logic of the 
+    application
+    JavaFX can be integrated in Swing applications
