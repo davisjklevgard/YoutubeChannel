@@ -19,3 +19,30 @@ public class ImageExample extends Application {
       //Setting the position of the image 
       imageView.setX(50); 
       imageView.setY(25);
+      
+      //setting the fit height and width of the image view
+      imageView.setFitHeight(455);
+      imageView.setFitWidth(500);
+      
+      //Setting the pressure ratio of the image view
+      imageView.setPreserveRatio(true);
+      
+      //Creating a group object
+      Group root = new Group(imageView);
+      
+      //Creating a scene object
+      Scene scene = new Scnee(root, 600, 500);
+      
+      //Setting title to the Stage
+      stage.setTitle("Virtual Cat");
+      
+      //Adding scene to the stage
+      Stage.setScene(scene);
+      
+      //Displaying the contents of he stage
+      stage.show();
+   }
+   public static void main(string args[]) {
+      launch(args);
+   }
+}
