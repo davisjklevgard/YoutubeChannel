@@ -1,0 +1,21 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import javafx.application.Application;
+import javafx.scene.Group;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import Javafx.stage.Stage;
+
+public class ImageExample extends Application {  
+   @Override 
+   public void start(Stage stage) throws FileNotFoundException {         
+      //Creating an image 
+      Image image = new Image(new FileInputStream("C:\Users\HP ProBook G1\Desktop\Youtube Java Videos"));  
+      
+      //Setting the image view 
+      ImageView imageView = new ImageView(image); 
+      
+      //Setting the position of the image 
+      imageView.setX(50); 
+      imageView.setY(25);
