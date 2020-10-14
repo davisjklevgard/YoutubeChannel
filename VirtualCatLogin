@@ -1,6 +1,6 @@
 import java.net.*;
 importjavafx.geometry.*;
-import javafx.applicationApplication;
+import javafx.application.Application;
 import javafx.stage.Stage;
 import javafx.scene.control.*;
 import javafx.scene.layout.*;
@@ -12,12 +12,44 @@ public class VirtualCatLogin extends Application {
   
   public static void main(String[] args) {
     launch(args);
+    
+    GridPane grid = new GridPane();
+    grid.setAlignment(Pos.CENTER);
+    grid.setHgap(10);
+    grid.setVgap(10);
+    grid.setPadding(new Insets(25, 25, 25, 25));
+    
+    Scene scene = new Scene(grid, 300, 275);
+    primaryStage.setScene(scene);
+    primaryStage.show();
+    
+    
+  Text scenetitle = new Text("Welcome");
+  scenetitle.setFont(Font.font("Arial", FontWeight.NORMAL, 20));
+  grid.add(scenetitle, 0, 0, 2, 1);
+  
+  Label userName = ne Label("Username:");
+  grid. add(userName, 0, 1);
+  
+  TextField userTextField = new TextField();
+  grid.add(userTextField, 1, 1):
+  
+  Label pw = new Label("Password:");
+  grid.add(pw, 0, 2);
+  
+  PasswordField pwBox = new PasswordField();
+  grid.add(pwBox, 1, 2);
   
   @Override
   //this will make a window that will contain everything
   public void start(Stage primaryStage) throws Exception {
     //adds a button to the window
-    Button btn = new Button("Click me");
+    Button btn = new Button("Sign in");
+    HBox hbBtn = new Hbox(10);
+    hbBtn.setAlignment(Pos.BOTTOM_RIGHT);
+    hbBtn.getChildren().add(btn);
+    grid.add(hbBtn, 1, 4);
+    
     btn.setOnAction(newEventHandler<ActionEvent>(){
         @Override
         //will send to the console that the button has been clicked
@@ -27,11 +59,13 @@ public class VirtualCatLogin extends Application {
         
     });
     //adds a layout to the window
-    StackPane root = new StackPane();
-    root.getChildren().add(btn);
+    //StackPane root = new StackPane();
+    //root.getChildren().add(btn);
     //fixes how large the window is
-    Scene scene = new Scene(root,600/*width*/,400/*height*/); 
-    primaryStage.setScene(scene);
-    primaryStage.show();
+    //Scene scene = new Scene(root,600/*width*/,400/*height*/); 
+    
+    //Scene scene = new Scene(grid, 300, 275);
+    //primaryStage.setScene(scene);
+    //primaryStage.show();
   }
 }
