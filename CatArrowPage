@@ -49,6 +49,18 @@ privat static final int    KEYBOARD_MOVEMENT_DELTA = 5;
       
       //Displaying the contents of the stage
       stage.show();
+      
+      private void moveCat(Scene scene, final Circle circle) {
+         scene.setOnKeyPressed(new EventHandler<KeyEvent>() {
+            @Override public void handle(KeyEvent event){
+               switch (event.getCode()) {
+                  case UP:    image.setCenterY(image.getCenterY() - KEYBOARD_MOVEMENT_DELTA); break;
+                  case RIGHT: image.setCenterX(image.getCenterX() + KEYBOARD_MOVEMENT_DELTA); break;
+                  case DOWN:  image.setCenterY(image.getCenterY() + KEYBOARD_MOVEMENT_DELTA); break;
+                  case LEFT:  image.setCenterX(image.getCenterX() - KEYBOARD_MOVEMENT_DELTA); break;
+                  }
+               }
+            }};
    }
    public static void main(string args[]) {
       launch(args);
