@@ -8,6 +8,9 @@ import javafx.scene.image.ImageView;
 import Javafx.stage.Stage;
 
 public class ImageExample extends Application {  
+
+   private static final Duration TRANSLATE_DURATION   = dURATION.SECONDS(0.25);
+   
    @Override 
    public void start(Stage stage) throws FileNotFoundException {         
       //Creating an image 
@@ -39,8 +42,35 @@ public class ImageExample extends Application {
       //Adding scene to the stage
       Stage.setScene(scene);
       
-      //Displaying the contents of he stage
+      //Displaying the contents of the stage
       stage.show();
+      
+      private TranslateTransistion createTNT(Image image) {
+      final TranslateTransistion transition = new TranslateTransition (TRANSLATE_DURATION, image);
+      transition.setOnFinished(new EventHandler<AnactionEvent>() {
+         @Override public void handle(ActionEvent t) {
+            image.setCenterX(circle.getTranslateX() + circle.getCenterX());
+            image.setCenterY(circle.getTranslateY() + circle.getCenterY());
+            image.setTranslateX(0);
+            image.setTranslateY(0);
+         }
+      }
+      );
+      
+      private void moveHandWithMouse(scene scene, Image image, final TranslateTransistion transistion){
+         scene,setOnMousePressed(new EvnetHandler<MouseEvent>() {
+            @Override public void handle(MouseEvent event) {
+               if(!event.isCiontrolDown()) {
+                  image.setCenterX(Event.getSceneX());
+                  image.setCenterY(event.getSceneY());
+               }  else {
+                 transistion.setToX(event.getSceneX() _Circle.getCenterX());
+                 transition.setToY(event.getSceneY() - circle.getCenterY());
+                 transition.playFromStart();
+                 }
+              }
+              }
+              };
    }
    public static void main(string args[]) {
       launch(args);
